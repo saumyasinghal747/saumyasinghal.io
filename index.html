@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        colors: {
+        mango: '#FBBF24',
+        cream: '#FFCA67',
+        raisin: '#26252C',
+        latte: '#FFF8E8',
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    img { 
+    image-rendering: optimizeSpeed;             /*                     */
+    image-rendering: -moz-crisp-edges;          /* Firefox             */
+    image-rendering: -o-crisp-edges;            /* Opera               */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+    image-rendering: pixelated;                 /* Chrome as of 2019   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
+}
+
+.page {
+  @apply h-screen w-screen relative;
+}
+
+.page h2 {
+  @apply text-5xl font-extrabold;
+}
+
+.page .body {
+  @apply grow
+}
+
+.page {
+  @apply py-12 px-16 flex flex-col gap-10;
+}
+
+.page:not(.dark) {
+  @apply bg-latte text-raisin;
+}
+
+.page.dark {
+  @apply bg-raisin text-latte;
+}
+
+.project {
+  @apply  gap-2 w-32 shrink-0 grow-0 self-stretch  flex flex-col;
+}
+
+.project h3 {
+  @apply text-2xl font-extrabold;
+}
+
+.project p {
+  @apply text-xs;
+}
+
+.project div {
+  @apply h-28 bg-cream;
+}
+  </style>
+</head>
+<body>
+<div class="h-screen w-screen overflow-y-auto">
+  <div class="page flex px-16">
+    <img class="absolute right-12 top-1/2 h-96 -translate-y-1/2" src="https://raw.githubusercontent.com/FrozenMango747/FrozenMango747.github.io/master/favicon.png" />
+    <h1 class="relative z-20 my-auto text-8xl font-extrabold">Saumya Singhal</h1>
+  </div>
+<div class="dark page">
+  <h2>About</h2>
+  <div class="body flex flex-row divide-x-2 divide-latte">
+    <div class="grow flex flex-col justify-between">
+      <p class="font-bold text-2xl">Saumya Singhal,</p>
+      <p class="font-bold max-w-fit  text-cream leading-none text-8xl">Math Addict.</p>
+    </div>
+    <div class="flex flex-col shrink-0 gap-2 px-5">
+      <img class="w-20 rounded-full" src="https://cdn.discordapp.com/attachments/908577895734214697/967156830268715128/7A53EE20-383E-4190-8EF2-9434C9BAB203.jpeg" />
+      <div class="flex grow items-end text-center font-bold text-cream">Contact Me</div>
+      <div class="flex flex-row gap-1">
+        <svg class="my-auto h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        <a class="my-auto flex items-center text-xs font-bold">LinkedIn</a>
+      </div>
+      <div class="flex flex-row gap-1">
+        <svg class="my-auto h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <a class="my-auto flex items-center text-xs font-bold">Github</a>
+      </div>
+      <div class="flex flex-row gap-1">
+        <svg class="my-auto h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <a class="my-auto flex items-center text-xs font-bold">Mail</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="page">
+    <h2>Leadership</h2>
+    <div class="body flex flex-col gap-3">
+      <div class="flex flex-row gap-6">
+        <div class="rounded-full bg-cream p-8"></div>
+        <div class="flex flex-col">
+          <h3 class="mt-auto text-2xl font-extrabold">JLS Math Circle</h3>
+          <p class="mb-auto text-sm opacity-80">Founder and Director</p>
+        </div>
+      </div>
+      <div class="flex flex-row gap-6">
+        <div class="rounded-full bg-cream p-8"></div>
+        <div class="flex flex-col">
+          <h3 class="mt-auto text-2xl font-extrabold">Gunn United Computations</h3>
+          <p class="mb-auto text-sm opacity-80">President</p>
+        </div>
+      </div>
+      <div class="flex flex-row gap-6">
+        <div class="rounded-full bg-cream p-8"></div>
+        <div class="flex flex-col">
+          <h3 class="mt-auto text-2xl font-extrabold">Gunn Math Circle</h3>
+          <p class="mb-auto text-sm opacity-80">Vice President of Pure Mathematics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dark page">
+    <h2>Projects</h2>
+    <div class="body order-1 flex flex-none flex-row items-start gap-4 self-stretch overflow-x-auto">
+      <div class="project">
+        <div></div>
+        <h3>Gunn.One</h3>
+        <p>The orange blocks represent a photo or logo of the project</p>
+      </div>
+      <div class="project">
+        <div></div>
+        <h3>Tangent</h3>
+        <p>The orange blocks represent a photo or logo of the project</p>
+      </div>
+      <div class="project">
+        <div></div>
+        <h3>YMath.io</h3>
+        <p>The orange blocks represent a photo or logo of the project</p>
+      </div>
+      <div class="project">
+        <div></div>
+        <h3>HaoMango</h3>
+        <p>The orange blocks represent a photo or logo of the project</p>
+      </div>
+      <div class="project">
+        <div></div>
+        <h3>Elimination</h3>
+        <p>The orange blocks represent a photo or logo of the project</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
